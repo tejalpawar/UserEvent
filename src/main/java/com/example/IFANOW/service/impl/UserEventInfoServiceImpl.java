@@ -23,7 +23,7 @@ public class UserEventInfoServiceImpl implements UserEventInfoService {
     @Override
         public String submitUserEventInfo(UserEventInfo userEventInfo) {
 
-        List<UserEventInfo> userEventInfos=userEventInfoRepository.findAll();
+        List<UserEventInfo> userEventInfos=userEventInfoRepository.findAllById(userEventInfo.getUserid());
          int totalamount=0;
         try{
 
