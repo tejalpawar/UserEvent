@@ -7,4 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserEventInfoRepository extends JpaRepository<UserEventInfo, Integer>  {
+  
+    @Query("select u from UserEventInfo u where u.userid =?1")
+    List<UserEventInfo> findAllById(long  userId);
 }
